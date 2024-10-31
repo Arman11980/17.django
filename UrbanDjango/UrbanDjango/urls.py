@@ -18,11 +18,10 @@ from django.contrib import admin
 from django.urls import path
 from django.contrib import admin
 from django.urls import path
-from UrbanDjango.task2.views import class_, func
-from django.views.generic import TemplateView
+from UrbanDjango.task2.views import shab_class, shab_func
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('class/', TemplateView.as_view(template_name='class_template.html')),
-    path('func/', func)
+    path('', shab_func),
+    path('', shab_class.as_view())
 ]
